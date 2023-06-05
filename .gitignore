@@ -3,3 +3,4 @@ cache/
 artifacts/
 circuits/build/
 circuits/target/
+.idea/
