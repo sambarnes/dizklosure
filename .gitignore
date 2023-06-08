@@ -4,3 +4,5 @@ artifacts/
 circuits/build/
 circuits/target/
 .idea/
+assets/
+DEMOSLIDES.*
