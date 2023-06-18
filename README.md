@@ -12,10 +12,10 @@ With this circuit, Alice can prove the government claims she was born on *some* 
 
 To setup the noir toolchain, use [noirup](https://github.com/noir-lang/noirup).
 
-We'll specifically need to use a dev branch, since support for ecdsa over secp256k1 is not yet released.
+Specifically nightly. There were some breaking changes in 0.6.0
 
 ```bash
-noirup --branch aztec3-hacky
+noirup --nightly
 ```
 
 To test the circuit, use nargo:
@@ -28,7 +28,6 @@ nargo test
 ## TODO
 
 * Fix `nargo prove p` and `nargo verify p`, currently broken here 🤷‍♀️
-* Wait for `nargo codegen-verifier` to be fixed with ecdsa sigs
 * Integrate foundry into the test framework, building off of [nplate](https://github.com/whitenois3/nplate)
 
 ## Disclaimer
