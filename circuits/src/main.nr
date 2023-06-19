@@ -85,7 +85,7 @@ fn test_construct_claim_payload() {
     assert(want == got);
 
     // uncomment & inspect with: nargo test --show-output
-    std::println(got);
+    // std::println(got);
 }
 
 #[test]
