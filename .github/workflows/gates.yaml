@@ -18,7 +18,7 @@ jobs:
         run: |
           cd circuits
           GATES=$(nargo info)
-          gh pr comment $PR_NUMBER --body "<pre>$GATES</pre>"
+          gh pr comment $PR_NUMBER --body "<pre>$GATES</pre>" --edit-last
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ github.event.number }}
