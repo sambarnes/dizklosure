@@ -9,15 +9,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install Nargo
+      - name: Install nargo
         uses: noir-lang/noirup@v0.1.2
         with:
           toolchain: nightly
 
-      - run: |
+      - name: Comment nargo info
+        run: |
           cd circuits
           GATES=$(nargo info)
-          gh pr comment $PR_NUMBER --body "nargo info:\n\n$GATES"
+          gh pr comment $PR_NUMBER --body "```$GATES```"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ github.event.number }}
