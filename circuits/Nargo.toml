@@ -1,6 +1,8 @@
 [package]
+name = "dizklosure"
 authors = ["sambarnes"]
-compiler_version = "0.1"
+type = "bin"
+compiler_version = ">=0.19.4"
 
 [dependencies]
     
